@@ -17,7 +17,7 @@
         <div class="container py-md-1 py-sm-1">
 
             <form id="Form" action="destino.html" onsubmit="return validar()" method="post">
-                <div class="row mb-3 pt-3"> 
+                <div class="row mb-3 pt-3">
                     <div class="col-md-4 col-sm-7 col-xs-2 pt-3">
                         <label class="form-label" for="">Nombre de usuario</label>
                         <input id="input-nombre" class="form-control" type="text" placeholder="Ingrese su nombre">
@@ -26,9 +26,11 @@
                     <div class="col-md-4 col-sm-5 col-xs-2 pt-3">
                         <label class="form-label" for="">Contraseña</label>
                         <div class="cont-c">
-                        <input id="input-contraseña" class="form-control" type="password"
-                            placeholder="">
-                            <i class="bx bx-show-alt"></i>
+                            <input id="input-contraseña" class="form-control" type="password"
+                                placeholder="Ingrese su contraseña">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputGroupPrepend3"><i class="bx bx-hide"></i></span>
+                            </div>
                         </div>
                         <div id="error-contraseña"></div>
                     </div>
@@ -130,11 +132,32 @@
 
                         <div class="d-grid gap-2 d-md-block pb-3">
 
-                            <button  type="submit" class="subscribe btn btn-primary btn-block rounded-pill shadow-sm">Registrarse</button>
+                            <button type="button" class="subscribe btn btn-primary btn-block rounded-pill shadow-sm "
+                                onclick="mostrarModal()">Registrarse</button>
 
                         </div>
                     </div>
-
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Confirmar envío</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    ¿Estás seguro de que deseas enviar el formulario?
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Cancelar</button>
+                                    <button type="button" class="btn btn-primary"
+                                        onclick="enviarFormulario()">Confirmar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
             </form>
 
         </div>
@@ -143,7 +166,12 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
             crossorigin="anonymous"></script>
-            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+            integrity="sha384-3NCfvR4K3F8s9GA0WhBg5cfHrUc08K66F7K2b7AFfcE/+Z1FL28cSs2JbKtkQpFj"
+            crossorigin="anonymous"></script>
+
     </div>
 </body>
 

@@ -74,7 +74,18 @@ function caracter_especial(str) {
     return false;
 }
 
+const selectElement = document.getElementById('select-prefijo');
+const selectIcon = document.getElementById('select-icon');
 
+function updateIcon() {
+    const selectedOption = selectElement.options[selectElement.selectedIndex];
+    const iconSrc = selectedOption.getAttribute('data-icon');
+    selectIcon.src = iconSrc;
+}
+
+selectElement.addEventListener('change', updateIcon);
+
+updateIcon();
 
 function validar_aficiones() {
     var input_aficion = document.getElementById('input-otro')
@@ -362,6 +373,31 @@ function validar_url() {
 }
 
 
+function mostrarModal() {
+    if (validar()) {
+      var myModal = new bootstrap.Modal(document.getElementById('exampleModal'));
+      myModal.show();
+    }
+  }
+
+
+  
+  function enviarFormulario() {
+    if (validar()) {
+      document.getElementById('Form').submit();
+    }
+  }
+  
+
+$('#exampleModal').on('show.bs.modal', function () {
+    // Eliminar el modal-backdrop existente
+    $('.modal-backdrop').remove();
+    
+    // Crear y agregar un nuevo modal-backdrop
+    $('<div class="modal-backdrop custom-backdrop"></div>').appendTo(document.body);
+  });
+  
+
 function validar_direccion() {
     var direccion = document.getElementById('input-direccion').value;
     var direccion1 = document.getElementById('input-direccion')
@@ -497,25 +533,15 @@ var icon = document.querySelector('.bx');
 icon.addEventListener("click", e => {
     if (pass.type === 'password') {
         pass.type = 'text';
-        icon.classList.remove('bx-show-alt');
-        icon.classList.add('bx-hide');
-    } else {
-        pass.type = 'password';
         icon.classList.add('bx-show-alt');
         icon.classList.remove('bx-hide');
+    } else {
+        pass.type = 'password';
+
+        icon.classList.remove('bx-show-alt');
+        icon.classList.add('bx-hide');
     }
 });
 
-const selectElement = document.getElementById('select-prefijo');
-const selectIcon = document.getElementById('select-icon');
 
-function updateIcon() {
-    const selectedOption = selectElement.options[selectElement.selectedIndex];
-    const iconSrc = selectedOption.getAttribute('data-icon');
-    selectIcon.src = iconSrc;
-}
-
-selectElement.addEventListener('change', updateIcon);
-
-updateIcon();
 
