@@ -234,6 +234,23 @@ function validar_contraseña() {
     }
 };
 
+var pass = document.getElementById('input-contraseña');
+var icon = document.querySelector('.bx');
+
+icon.addEventListener("click", e => {
+    if (pass.type === 'password') {
+        pass.type = 'text';
+        icon.classList.add('bx-show-alt');
+        icon.classList.remove('bx-hide');
+    } else {
+        pass.type = 'password';
+
+        icon.classList.remove('bx-show-alt');
+        icon.classList.add('bx-hide');
+    }
+});
+
+
 function tiene_digito(str) {
     for (var i = 0; i < str.length; i++) {
         if (str[i] >= '0' && str[i] <= '9') {
@@ -527,21 +544,7 @@ function guardarFormulario() {
 }
 
 
-var pass = document.getElementById('input-contraseña');
-var icon = document.querySelector('.bx');
 
-icon.addEventListener("click", e => {
-    if (pass.type === 'password') {
-        pass.type = 'text';
-        icon.classList.add('bx-show-alt');
-        icon.classList.remove('bx-hide');
-    } else {
-        pass.type = 'password';
-
-        icon.classList.remove('bx-show-alt');
-        icon.classList.add('bx-hide');
-    }
-});
 
 
 
