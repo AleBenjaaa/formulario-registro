@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&display=swap');
+
+form {
+  padding: 5px 55px;
+  box-shadow: 0 .4rem .6rem;
+  border-radius: 10px;
+  width: 800px;
+  margin: 20px;
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(255, 255, 255, .2);
+  background-color: white;
+  font-weight: bold;
+}
+
+.container {
+  font-family: 'Nunito', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background: transparent; */
+
+}
+
+.container_1{
+  background-color: white;
+  border-radius: 10px;
+  width: 700px;
+  margin-top: 150px;
+  
+  
+}
+
+.main .section .container_1 img{
+  width: 200px;
+  max-width: 100%;
+  margin-top:20px;
+  height: auto;
+
+}
+
+.section{
+  height: 100%;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  
+}
+
+
+.main .container_1 h1{
+color: black;
+padding-bottom: 20px;
+
+  
+}
+
+
+.list-group {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  border: 1px solid #E0E0E0;
+}
+
+h1 {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.main {
+  background-color: #152733;
+
+}
+
+.main h1 {
+  color: white;
+}
+
+.main h3 {
+  padding-top: 3px;
+  padding-bottom: 3px;
+
+}
+
+input,
+select,
+textarea {
+  border: 1px solid #E0E0E0;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  transition: box-shadow 0.3s ease-in-out;
+  color: #333333;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #1ABC9C;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+label {
+  color: #7F8C8D;
+
+}
+
+
+#input-telefono[type=number]::-webkit-outer-spin-button,
+#input-telefono[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.btn-block {
+  width: 100%;
+}
+
+#btn-in {
+  width: 220px;
+}
+
+.input-group-append {
+  margin-left: 10px;
+}
+
+.nueva-aficion .form-check-label {
+  margin-left: 5px;
+}
+
+.list-group-item {
+  display: flex;
+  align-items: center;
+}
+
+
+@media(max-width:576px) {
+  #btn-in{
+    width: 130px;
+  }
+}
+
+
+.cont-c{
+  display: flex;
+  align-items: center;
+}
+
+.bx{
+  width: 1px;
+  font-size: 20px;
+  transform: translateX(-25px);
+  cursor: pointer;
+}
+
+.form-control #input-contraseña{
+font-size: 1.5rem;
+width: 400px;
+padding: 10px 5px;
+}
+
+
+
+
+.select-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+
+}
+
+.form-select {
+  width: 100%;
+  padding: 10px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding-right: 30px;
+}
+
+.select-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+}
